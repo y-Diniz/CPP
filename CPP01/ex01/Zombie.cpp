@@ -6,7 +6,7 @@
 /*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 00:21:49 by devrafaelly       #+#    #+#             */
-/*   Updated: 2026/03/05 00:38:53 by devrafaelly      ###   ########.fr       */
+/*   Updated: 2026/03/05 02:13:31 by devrafaelly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Zombie::Zombie( void ) {}
 
-Zombie::~Zombie( ) {
+Zombie::~Zombie( void ) {
 	std::cout << name << ": was destroyed" << std::endl;
 }
 

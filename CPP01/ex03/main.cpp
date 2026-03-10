@@ -6,7 +6,7 @@
 /*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 01:04:11 by devrafaelly       #+#    #+#             */
-/*   Updated: 2026/03/05 02:03:02 by devrafaelly      ###   ########.fr       */
+/*   Updated: 2026/03/05 02:21:27 by devrafaelly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 
-int main( void )
-{
+int main( void ) {
+	
+	std::cout << "*** HUMAN A ATTACKS ***" << std::endl;
 	{
 		Weapon club = Weapon("phantom");
 		
@@ -24,6 +25,7 @@ int main( void )
 		club.setType("operator");
 		bob.attack();
 	}
+	std::cout << std::endl << "*** HUMAN B ATTACKS WITH WEAPON ***" << std::endl;
 	{
 		Weapon club = Weapon("vandal");
 
@@ -33,6 +35,7 @@ int main( void )
 		club.setType("bulldog");
 		jim.attack();
 	}
+	std::cout << std::endl << "*** HUMAN B ATTACKS WITHOUT WEAPON ***" << std::endl;
 	{
 		Weapon club = Weapon("sheriff");
 
