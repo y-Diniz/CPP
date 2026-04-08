@@ -1,4 +1,4 @@
-NAME		:= .build/
+NAME		:= .build/replace
 
 CPP			:= c++
 CPPFLAGS 	:= -Wall -Wextra -Werror -std=c++98
@@ -14,8 +14,7 @@ BLUE		:= \033[0;34m
 RESET		:= \033[0m
 
 # Files
-INCLUDES	:= Account.hpp
-SRC			:= Main.cpp Account.cpp tests.cpp
+SRC			:= main.cpp 
 OBJ			:= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
 $(NAME): $(OBJ)

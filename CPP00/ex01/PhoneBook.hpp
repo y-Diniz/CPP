@@ -23,14 +23,14 @@ class PhoneBook {
 	
 	public:
 		PhoneBook();
-		void AddToPhoneBook( void );
-		void PrintPhoneBook( void );
-		void GetChosenContact( void );
+		void addToPhoneBook( void );
+		void printPhoneBook( void );
+		void getChosenContact( void );
 
 	private:
-		Contact ContactArray[8];
-		int		Count;
-		int		Index;
+		Contact contactArray[8];
+		int		count;
+		int		index;
 };
 
 #endif

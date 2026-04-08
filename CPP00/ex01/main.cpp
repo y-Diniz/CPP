@@ -18,7 +18,7 @@
 
 int main(void)
 {
-	PhoneBook 	PhoneBook;
+	PhoneBook 	phoneBook;
 	std::string input;
 
 	while (input != "EXIT")
@@ -27,11 +27,11 @@ int main(void)
 		std::cout << "> ";
 		getline(std::cin, input);
 		if (input == "ADD")
-			PhoneBook.AddToPhoneBook();
+			phoneBook.addToPhoneBook();
 		else if (input == "SEARCH")
 		{
-			PhoneBook.PrintPhoneBook();
-			PhoneBook.GetChosenContact();
+			phoneBook.printPhoneBook();
+			phoneBook.getChosenContact();
 		}
 	}
 	return 0;

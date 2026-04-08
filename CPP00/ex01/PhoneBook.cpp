@@ -12,34 +12,34 @@
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook() : Count(0), Index(0) {}
+PhoneBook::PhoneBook() : count(0), index(0) {}
 
-void PhoneBook::AddToPhoneBook(void)
+void PhoneBook::addToPhoneBook(void)
 {
-	if (Index >= 8)
-		Index = 0;
-	ContactArray[Index].SetContact();
-	Index++;
-	if (Count < 8)
-		Count++;
+	if (index >= 8)
+		index = 0;
+	contactArray[index].setContact();
+	index++;
+	if (count < 8)
+		count++;
 }
 
-void PhoneBook::PrintPhoneBook(void)
+void PhoneBook::printPhoneBook(void)
 {
-	int    Index;
+	int    index;
 
-    Index = 0;
-    while (Index < Count)
+    index = 0;
+    while (index < count)
 	{
-		ContactArray[Index].PrintContacts(Index);
-		Index++;
+		contactArray[index].printContacts(index);
+		index++;
 	}
 }
 
-void PhoneBook::GetChosenContact()
+void PhoneBook::getChosenContact()
 {
-	std::string Input;
-	int Index;
+	std::string input;
+	int index;
 	int	i;
 	
 	i = 3;
@@ -47,9 +47,9 @@ void PhoneBook::GetChosenContact()
 	{
 		std::cout << "Enter the index of the contact you wish to view:" << std::endl;
 		std::cout << "> ";
-		getline(std::cin, Input);
-		size_t Check = Input.find_first_not_of("01234567");
-		if (Check == std::string::npos)
+		getline(std::cin, input);
+		size_t check = input.find_first_not_of("01234567");
+		if (check == std::string::npos)
 			break;
 		std::cout << "Invalid index. Please enter a number. You have " << i << " tries left" << std::endl;
 		i--;
@@ -58,10 +58,10 @@ void PhoneBook::GetChosenContact()
 	if (i < 0)
 		return ;
 	
-	std::stringstream ss(Input);
-	ss >> Index;
-	if (Index < Count)
-		ContactArray[Index].PrintChosenContact();
+	std::stringstream ss(input);
+	ss >> index;
+	if (index < count)
+		contactArray[index].printChosenContact();
 	else
-		std::cout << "Index out of range. No contact found at this position." << std::endl;
+		std::cout << "index out of range. No contact found at this position." << std::endl;
 }

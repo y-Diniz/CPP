@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/22 20:00:43 by devrafaelly       #+#    #+#             */
-/*   Updated: 2026/02/25 05:58:52 by devrafaelly      ###   ########.fr       */
+/*   Created: 2026/03/05 01:04:06 by devrafaelly       #+#    #+#             */
+/*   Updated: 2026/03/05 01:48:13 by devrafaelly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
-# include <iomanip>
 # include <iostream>
 # include <string>
 
-class Contact {
-	
-	public:
-		void SetContact( void );
-		void PrintContacts( int Index );
-		void PrintChosenContact();
-		
-	private:
-		std::string FirstName;
-		std::string LastName;
-		std::string NickName;
-		std::string DarkSecret;
-		std::string PhoneNumber;
+#include "Weapon.hpp"
 
-		void PrintField( std::string Text );
-		void ShrinkString( std::string Text );
-		void GetInfo( std::string &Field, std::string Text, bool Phone );
+class HumanA {
+
+	public:
+		HumanA( std::string name, Weapon& weapon );
+		void	attack( void );
+
+	private:
+		std::string	name;
+		Weapon&		weapon;
+
 };
 
 #endif
