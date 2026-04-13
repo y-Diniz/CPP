@@ -5,24 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafaoliv <rafaoliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/09 21:03:54 by devrafaelly       #+#    #+#             */
-/*   Updated: 2026/04/09 13:26:54 by rafaoliv         ###   ########.fr       */
+/*   Created: 2026/04/10 17:45:22 by rafaoliv          #+#    #+#             */
+/*   Updated: 2026/04/10 17:45:45 by rafaoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include "Fixed.hpp"
+#include <iostream>
 
-int main(int ac, char** av)
-{
-	if (ac != 2) {
-		std::cout << "Usage: " << av[0] << " <complain>" << std::endl;
-		return 1;
-	}
-	
-	Harl harl;
-	std::string complain = av[1];
-	
-	harl.complain(complain);
-
+int main( void ) {
+	Fixed a;
+	Fixed b( a );
+	Fixed c;
+	c = b;
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
 	return 0;
 }

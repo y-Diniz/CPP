@@ -1,10 +1,10 @@
-NAME		:= .build/zombie
+NAME		:= build/zombie
 
 CPP			:= c++
 CPPFLAGS 	:= -Wall -Wextra -Werror -std=c++98
 
 # Directories
-OBJ_DIR		:= .build
+OBJ_DIR		:= build
 
 # Colors
 GREEN 		:= \033[0;32m

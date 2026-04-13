@@ -1,4 +1,4 @@
-NAME		:= build/phoneBook
+NAME		:= build/fixed
 
 CPP			:= c++
 CPPFLAGS 	:= -Wall -Wextra -Werror -std=c++98
@@ -14,8 +14,8 @@ BLUE		:= \033[0;34m
 RESET		:= \033[0m
 
 # Files
-INCLUDES	:= PhoneBook.hpp Contact.hpp
-SRC			:= main.cpp PhoneBook.cpp Contact.cpp
+INCLUDES	:= Fixed.hpp
+SRC			:= main.cpp Fixed.cpp
 OBJ			:= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
 $(NAME): $(OBJ)
