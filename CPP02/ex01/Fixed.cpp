@@ -6,12 +6,13 @@
 /*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 13:53:16 by rafaoliv          #+#    #+#             */
-/*   Updated: 2026/05/01 17:25:30 by devrafaelly      ###   ########.fr       */
+/*   Updated: 2026/05/01 19:02:51 by devrafaelly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <iostream>
+#include <math.h>
 
 Fixed::Fixed() : fixed_(0) {
 	std::cout << "Default constructor called" << std::endl;
@@ -32,11 +33,35 @@ Fixed::~Fixed() {
 	std::cout << "Destructor called" << std::endl;
 }
 
+Fixed::Fixed( int const n ) {
+	std::cout << "Int constructor called" << std::endl;
+	fixed_ = n << BITS;
+}
+
+Fixed::Fixed( float const n ) {
+	std::cout << "Float constructor called" << std::endl;
+	fixed_ = roundf(n * (1 << BITS));
+}
+
+float Fixed::toFloat( void ) const {
+	return (float)fixed_ / (1 << BITS);
+}
+
+int Fixed::toInt( void ) const {
+	return (int)fixed_ >> BITS;
+}
+
+
 int Fixed::getRawBits( void ) const {
 	std::cout << "getRawBits member function called" << std::endl;
-	return (this->fixed_);
+	return (fixed_);
 }
 
 void Fixed::setRawBits( int const raw ) {
-	this->fixed_ = raw;
+	fixed_ = raw;
+}
+
+std::ostream& operator<<(std::ostream& output, const Fixed& fixed) {
+    output << fixed.toFloat();
+    return output;
 }
