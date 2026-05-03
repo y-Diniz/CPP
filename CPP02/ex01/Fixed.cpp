@@ -6,7 +6,7 @@
 /*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 13:53:16 by rafaoliv          #+#    #+#             */
-/*   Updated: 2026/05/01 19:02:51 by devrafaelly      ###   ########.fr       */
+/*   Updated: 2026/05/03 19:24:11 by devrafaelly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Fixed::Fixed(const Fixed& src) : fixed_(src.fixed_) {
 Fixed& Fixed::operator=(const Fixed& src) {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &src)
-		setRawBits(src.getRawBits());
+		setRawbits(src.getRawbits());
 	return *this;
 }
 
@@ -35,29 +35,29 @@ Fixed::~Fixed() {
 
 Fixed::Fixed( int const n ) {
 	std::cout << "Int constructor called" << std::endl;
-	fixed_ = n << BITS;
+	fixed_ = n << bits;
 }
 
 Fixed::Fixed( float const n ) {
 	std::cout << "Float constructor called" << std::endl;
-	fixed_ = roundf(n * (1 << BITS));
+	fixed_ = roundf(n * (1 << bits));
 }
 
-float Fixed::toFloat( void ) const {
-	return (float)fixed_ / (1 << BITS);
+float Fixed::toFloat( ) const {
+	return (float)fixed_ / (1 << bits);
 }
 
-int Fixed::toInt( void ) const {
-	return (int)fixed_ >> BITS;
+int Fixed::toInt( ) const {
+	return (int)fixed_ >> bits;
 }
 
 
-int Fixed::getRawBits( void ) const {
-	std::cout << "getRawBits member function called" << std::endl;
-	return (fixed_);
+int Fixed::getRawbits( ) const {
+	std::cout << "getRawbits member function called" << std::endl;
+	return fixed_;
 }
 
-void Fixed::setRawBits( int const raw ) {
+void Fixed::setRawbits( int const raw ) {
 	fixed_ = raw;
 }
 

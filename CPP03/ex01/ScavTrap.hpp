@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/10 17:45:22 by rafaoliv          #+#    #+#             */
-/*   Updated: 2026/05/03 19:24:11 by devrafaelly      ###   ########.fr       */
+/*   Created: 2026/05/03 19:09:19 by devrafaelly       #+#    #+#             */
+/*   Updated: 2026/05/03 20:05:10 by devrafaelly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
-#include <iostream>
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-int main( void ) {
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
-	c = b;
-	std::cout << a.getRawbits() << std::endl;
-	std::cout << b.getRawbits() << std::endl;
-	std::cout << c.getRawbits() << std::endl;
-	return 0;
-}
+# include "ClapTrap.hpp"
+# include <string>
+
+class ScavTrap : public ClapTrap {
+	
+	public:
+		ScavTrap( );
+		ScavTrap( const std::string& name );
+		~ScavTrap( );
+		ScavTrap( const ScavTrap& src );
+		ScavTrap& operator=( const ScavTrap& src );
+		void attack( const std::string& target );
+		void guardGate();
+
+};
+
+#endif

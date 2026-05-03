@@ -6,7 +6,7 @@
 /*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 13:53:29 by rafaoliv          #+#    #+#             */
-/*   Updated: 2026/05/01 16:54:51 by devrafaelly      ###   ########.fr       */
+/*   Updated: 2026/05/03 19:24:11 by devrafaelly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ class	Fixed {
 		Fixed(const Fixed&);
 		Fixed& operator=(const Fixed& src);
 		~Fixed();
-		int getRawBits( void ) const;
-		void setRawBits( int const raw );
+		int getRawbits( void ) const;
+		void setRawbits( int const raw );
 
 	private:
 		int	fixed_;
-		static int const BITS = 8;
+		static int const bits = 8;
 		
 };
 

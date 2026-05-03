@@ -6,7 +6,7 @@
 /*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 13:53:29 by rafaoliv          #+#    #+#             */
-/*   Updated: 2026/05/02 17:46:04 by devrafaelly      ###   ########.fr       */
+/*   Updated: 2026/05/03 19:24:11 by devrafaelly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ class	Fixed {
 		Fixed( float const n );
 		float toFloat( void ) const;
 		int toInt( void ) const;
-		int getRawBits( void ) const;
-		void setRawBits( int const raw );
+		int getRawbits( void ) const;
+		void setRawbits( int const raw );
 
 		Fixed& operator=(const Fixed& src);
 		Fixed& operator++();
@@ -49,8 +49,8 @@ class	Fixed {
 		static const Fixed& max(const Fixed& a, const Fixed& b);
 
 	private:
-		int	fixed_;	
-		static int const BITS = 8;
+		int	fixed_;
+		static int const bits = 8;
 		
 };
 
