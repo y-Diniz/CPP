@@ -6,7 +6,7 @@
 /*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 17:21:41 by devrafaelly       #+#    #+#             */
-/*   Updated: 2026/05/04 18:38:14 by devrafaelly      ###   ########.fr       */
+/*   Updated: 2026/05/03 20:17:29 by devrafaelly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,29 @@
 #include <iostream>
 
 ClapTrap::ClapTrap( ) : name_(""), hit_points_(10), energy_points_(10), attack_damage_(0) {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "ClapTrap Default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap( const std::string& name ) : name_(name), hit_points_(10), energy_points_(10), attack_damage_(0) {
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "ClapTrap Constructor called" << std::endl;
 }
 
 ClapTrap::~ClapTrap() {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "ClapTrap Destructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap( const ClapTrap& src ) : name_(src.name_), hit_points_(src.hit_points_), energy_points_(src.energy_points_), attack_damage_(src.attack_damage_){
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "ClapTrap Copy constructor called" << std::endl;
 }
 
-ClapTrap& ClapTrap::operator=( const ClapTrap& src ) {
-	std::cout << "Copy assignment operator called" << std::endl;
-	if (this != &src)
+ClapTrap& ClapTrap::operator=( const ClapTrap& ct ) {
+	std::cout << "ClapTrap Copy assignment operator called" << std::endl;
+	if (this != &ct)
 	{
-		name_ = src.name_;
-		hit_points_ = src.hit_points_;
-        energy_points_ = src.energy_points_;
-        attack_damage_ = src.attack_damage_;
+		name_ = ct.name_;
+		hit_points_ = ct.hit_points_;
+		energy_points_ = ct.energy_points_;
+		attack_damage_ = ct.attack_damage_;
 	}
 	return *this;
 }
@@ -63,7 +63,7 @@ void ClapTrap::takeDamage( unsigned int amount ) {
 			hit_points_ = 0;
 	}
 	else
-		std::cout << "ClapTrap " << name_ << " it's already dead ):" << std::endl;
+		std::cout << "ClapTrap " << name_ << " can't take damage because it's already dead ):" << std::endl;
 }
 
 void ClapTrap::beRepaired( unsigned int amount ) {

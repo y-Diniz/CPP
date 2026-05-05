@@ -6,17 +6,17 @@
 /*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 17:18:03 by devrafaelly       #+#    #+#             */
-/*   Updated: 2026/05/04 19:30:51 by devrafaelly      ###   ########.fr       */
+/*   Updated: 2026/05/04 19:30:45 by devrafaelly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 #include <iostream>
 
 int main () {
-	ScavTrap a( "Maeve" );
-	ScavTrap b( "Mala" );
-	ScavTrap c = a;
+	FragTrap a( "Maeve" );
+	FragTrap b( "Mala" );
+	FragTrap c = a;
 	
 	std::cout << "A name: " << a.getName() << std::endl;
 	std::cout << "B name: " << b.getName() << std::endl;
@@ -31,13 +31,14 @@ int main () {
 	
 	for (int i = 0; i < 50; i++)
 		a.attack( "Aelin" );
-	a.attack( "Aelin" );
 	a.takeDamage( 90 );
-	a.guardGate( );
+	a.beRepaired( 10 );
+	for (int i = 0; i < 50; i++)
+		a.attack( "Aelin" );
+	a.highFivesGuys( );
 	a.beRepaired( 90 );
-	a.attack( "Aelin" );
 	a.takeDamage( 50 );
-	a.guardGate( );
+	a.highFivesGuys( );
 	a.takeDamage( 50 );
 	a.attack( "Aelin" );
 	

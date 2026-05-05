@@ -6,17 +6,17 @@
 /*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 17:18:03 by devrafaelly       #+#    #+#             */
-/*   Updated: 2026/05/04 19:30:51 by devrafaelly      ###   ########.fr       */
+/*   Updated: 2026/05/04 19:56:26 by devrafaelly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 #include <iostream>
 
 int main () {
-	ScavTrap a( "Maeve" );
-	ScavTrap b( "Mala" );
-	ScavTrap c = a;
+	DiamondTrap a( "Maeve" );
+	DiamondTrap b( "Mala" );
+	DiamondTrap c = a;
 	
 	std::cout << "A name: " << a.getName() << std::endl;
 	std::cout << "B name: " << b.getName() << std::endl;
@@ -29,15 +29,22 @@ int main () {
 	std::cout << "------------------------------------------ THE FINAL BATTLE ------------------------------------------" << std::endl;
 	std::cout << std::endl;
 	
-	for (int i = 0; i < 50; i++)
+	a.whoAmI();
+	a.highFivesGuys( );
+	for (int i = 0; i < 40; i++)
 		a.attack( "Aelin" );
-	a.attack( "Aelin" );
+	std::cout << "ENERGY LEFT: " << a.getEnergyPoints() << std::endl;
 	a.takeDamage( 90 );
-	a.guardGate( );
+	a.beRepaired( 10 );
+	for (int i = 0; i < 10; i++)
+		a.attack( "Aelin" );
+	std::cout << "ENERGY LEFT: " << a.getEnergyPoints() << std::endl;
+	a.guardGate();
 	a.beRepaired( 90 );
-	a.attack( "Aelin" );
 	a.takeDamage( 50 );
-	a.guardGate( );
+	a.highFivesGuys( );
+	a.guardGate();
+	a.whoAmI();
 	a.takeDamage( 50 );
 	a.attack( "Aelin" );
 	

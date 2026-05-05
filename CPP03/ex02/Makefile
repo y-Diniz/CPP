@@ -1,4 +1,4 @@
-NAME		:= build/ScavTrap
+NAME		:= build/FragTrap
 
 CPP			:= c++
 CPPFLAGS 	:= -Wall -Wextra -Werror -std=c++98
@@ -14,8 +14,8 @@ BLUE		:= \033[0;34m
 RESET		:= \033[0m
 
 # Files
-INCLUDES	:= ClapTrap.hpp ScavTrap.hpp
-SRC			:= main.cpp ClapTrap.cpp ScavTrap.cpp
+INCLUDES	:= ClapTrap.hpp FragTrap.hpp
+SRC			:= main.cpp ClapTrap.cpp FragTrap.cpp
 OBJ			:= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
 $(NAME): $(OBJ)

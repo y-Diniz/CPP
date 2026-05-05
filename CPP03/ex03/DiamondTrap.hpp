@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/03 17:21:43 by devrafaelly       #+#    #+#             */
-/*   Updated: 2026/05/04 18:37:48 by devrafaelly      ###   ########.fr       */
+/*   Created: 2026/05/04 18:51:53 by devrafaelly       #+#    #+#             */
+/*   Updated: 2026/05/04 19:55:54 by devrafaelly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_H
-# define CLAPTRAP_H
+#ifndef DIAMONDTRAP_H
+# define DIAMONDTRAP_H
 
+# include "ScavTrap.hpp"
+# include "FragTrap.hpp"
 # include <string>
 
-class ClapTrap {
+class DiamondTrap : public ScavTrap, public FragTrap {
 	
 	public:
-		ClapTrap( );
-		ClapTrap(  const std::string& name  );
-		~ClapTrap();
-		ClapTrap( const ClapTrap& ct );
-		ClapTrap& operator=( const ClapTrap& src );
+		DiamondTrap(  );
+		DiamondTrap( const std::string& name );
+		~DiamondTrap(  );
+		DiamondTrap( const DiamondTrap& dt );
+		DiamondTrap& operator=( const DiamondTrap& src );
 		void attack( const std::string& target );
-		void takeDamage( unsigned int amount );
-		void beRepaired( unsigned int amount );
+		void whoAmI();
 		std::string getName( ) const;
-
+		int getEnergyPoints() const;
+	
 	private:
 		std::string name_;
-		unsigned int hit_points_;
-		unsigned int energy_points_;
-		unsigned int attack_damage_;
-	
+
 };
 
 #endif
