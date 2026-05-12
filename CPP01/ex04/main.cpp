@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
+/*   By: rafaoliv <rafaoliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 16:24:09 by devrafaelly       #+#    #+#             */
-/*   Updated: 2026/03/09 19:37:19 by devrafaelly      ###   ########.fr       */
+/*   Updated: 2026/05/06 23:14:39 by rafaoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,15 @@ int	main(int ac, char** av)
 	s2 = av[3];
 	
 	std::ifstream ss(av[1]);
+	
 	if (!ss.is_open())
 	{
 		std::cerr << "Error: could not open input file" << std::endl;
 		return 1;
 	}
+	
 	std::ofstream replace((file + ".replace").c_str());
+	
 	if (!replace.is_open())
 	{
 		std::cerr << "Error: could not open output file" << std::endl;

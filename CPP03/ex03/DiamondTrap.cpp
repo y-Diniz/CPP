@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
+/*   By: rafaoliv <rafaoliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 18:51:52 by devrafaelly       #+#    #+#             */
-/*   Updated: 2026/05/04 19:59:45 by devrafaelly      ###   ########.fr       */
+/*   Updated: 2026/05/08 15:34:19 by rafaoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ DiamondTrap::DiamondTrap(  ) : ClapTrap(), ScavTrap(), FragTrap() {
 
 DiamondTrap::DiamondTrap( const std::string& name ) : ClapTrap( name + "_clap_name" ), ScavTrap( name ), FragTrap( name ) {
 	std::cout << "DiamondTrap Constructor called" << std::endl;
+	name_ = name;
 	hit_points_ = 100;
 	energy_points_ = 50;
 	attack_damage_ = 30;
@@ -34,9 +35,6 @@ DiamondTrap::~DiamondTrap(  ) {
 DiamondTrap::DiamondTrap( const DiamondTrap& dt ) : ClapTrap( dt ), ScavTrap( dt ), FragTrap( dt ) {
 	std::cout << "DiamondTrap Copy constructor called" << std::endl;
 	name_ = dt.name_;
-	hit_points_ = dt.hit_points_;
-	energy_points_ = dt.energy_points_;
-	attack_damage_ = dt.attack_damage_;
 }
 
 DiamondTrap& DiamondTrap::operator=( const DiamondTrap& src ) {
@@ -54,7 +52,7 @@ void DiamondTrap::whoAmI() {
 	if (hit_points_)
 		std::cout << "My DiamondTrap name is " << name_ << " and my ClapTrap name is " << ClapTrap::name_ << std::endl;
 	else
-		std::cout << "My DiamondTrap name is " << name_ << " and my ClapTrap name is " << ClapTrap::name_ << " but I'm dead ):" << std::endl;
+		std::cout << "My DiamondTrap name is " << name_<< " and my ClapTrap name is " << ClapTrap::name_ << " but I'm dead ):" << std::endl;
 }
 
 std::string DiamondTrap::getName( ) const {

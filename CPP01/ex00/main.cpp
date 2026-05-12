@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
+/*   By: rafaoliv <rafaoliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 23:28:38 by devrafaelly       #+#    #+#             */
-/*   Updated: 2026/03/09 19:35:40 by devrafaelly      ###   ########.fr       */
+/*   Updated: 2026/05/07 00:40:31 by rafaoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main( void )
 	randomChump("(random)Dorian");
 	Zombie* rowan = newZombie("(new)Rowan");
 	rowan->announce();
-	delete rowan;
 	delete aelin;
+	delete rowan;
 	return 0;
 }

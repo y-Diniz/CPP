@@ -1,7 +1,7 @@
-NAME		:= build/phoneBook
+NAME		:= build/Animal
 
 CPP			:= c++
-CPPFLAGS 	:= -Wall -Wextra -Werror -std=c++98 -g2
+CPPFLAGS 	:= -Wall -Wextra -Werror -std=c++98
 
 # Directories
 OBJ_DIR		:= build
@@ -14,8 +14,8 @@ BLUE		:= \033[0;34m
 RESET		:= \033[0m
 
 # Files
-INCLUDES	:= PhoneBook.hpp Contact.hpp
-SRC			:= main.cpp PhoneBook.cpp Contact.cpp
+INCLUDES	:= Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
+SRC			:= main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 OBJ			:= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
 $(NAME): $(OBJ)

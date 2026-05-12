@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Main.cpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafaoliv <rafaoliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 20:18:21 by devrafaelly       #+#    #+#             */
-/*   Updated: 2026/03/02 13:26:32 by rafaoliv         ###   ########.fr       */
+/*   Updated: 2026/05/06 16:32:02 by rafaoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ int main(void)
 		std::cout << "Enter a command: ADD, SEARCH or EXIT" << std::endl;
 		std::cout << "> ";
 		getline(std::cin, input);
+		if (std::cin.eof())
+		{
+			std::cout << "\nEOF received. Exiting program.\n";
+			break ;
+		}
 		if (input == "ADD")
 			phoneBook.addToPhoneBook();
 		else if (input == "SEARCH")

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
+/*   By: rafaoliv <rafaoliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 00:21:51 by devrafaelly       #+#    #+#             */
-/*   Updated: 2026/03/05 01:47:39 by devrafaelly      ###   ########.fr       */
+/*   Updated: 2026/05/07 00:44:29 by rafaoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,5 @@ class Zombie {
 
 };
 
+Zombie* zombieHorde( int N, std::string name );
 #endif

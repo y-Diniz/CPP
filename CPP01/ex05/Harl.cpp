@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
+/*   By: rafaoliv <rafaoliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 18:14:38 by devrafaelly       #+#    #+#             */
-/*   Updated: 2026/03/09 21:00:00 by devrafaelly      ###   ########.fr       */
+/*   Updated: 2026/05/07 01:17:45 by rafaoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,15 @@ void Harl::debug( void ) {
 
 void Harl::info( void ) {
 	std::cout << "[ INFO ]" << std::endl;
-	std::cout << "Eu não acredito que você conseguiu flashar o time inteiro de novo! Eu estava pronto para entrar no site e, de repente, estou completamente cego." << std::endl;
+	std::cout << "A utilidade do KAY/O ajudou bastante no round. Conseguimos avançar e garantir espaço no mapa." << std::endl;
 }
 
 void Harl::warning( void ) {
 	std::cout << "[ WARNING ]" << std::endl;
-	std::cout << "KAY/O, eu acho que essas flashes deveriam ser usadas contra o outro time. Porque, até agora, parece que o principal alvo delas somos nós." << std::endl;
+	std::cout << "As flashes estão acertando o próprio time com frequência. Se isso continuar, vamos começar a perder rounds importantes." << std::endl;
 }
 
 void Harl::error( void ) {
 	std::cout << "[ ERROR ]" << std::endl;
-	std::cout << "Isto é inaceitável! Você já flashou no meio da troca três rounds seguidos. DESINSTALA ESSE JOGO!" << std::endl;
+	std::cout << "Você cegou o time inteiro na hora no entry, a gente perdeu o round sem ver metade dos inimigos. DESINSTALA ESSE JOGO!" << std::endl;
 }

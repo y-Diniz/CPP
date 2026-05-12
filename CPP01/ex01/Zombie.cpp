@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
+/*   By: rafaoliv <rafaoliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 00:21:49 by devrafaelly       #+#    #+#             */
-/*   Updated: 2026/03/05 02:13:31 by devrafaelly      ###   ########.fr       */
+/*   Updated: 2026/05/07 00:43:09 by rafaoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie( void ) {}
+Zombie::Zombie( void ) {
+	std::cout << name << ": was created" << std::endl;
+}
 
 Zombie::~Zombie( void ) {
 	std::cout << name << ": was destroyed" << std::endl;

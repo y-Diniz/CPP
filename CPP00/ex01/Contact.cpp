@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: devrafaelly <devrafaelly@student.42.fr>    +#+  +:+       +#+        */
+/*   By: rafaoliv <rafaoliv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 20:00:21 by devrafaelly       #+#    #+#             */
-/*   Updated: 2026/02/25 05:58:36 by devrafaelly      ###   ########.fr       */
+/*   Updated: 2026/05/06 16:31:37 by rafaoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
+#include <cstdlib>
 
 void Contact::setContact() {
 	
@@ -28,6 +29,11 @@ void Contact::getInfo(std::string &field, std::string text, bool phone)
 	{
 		std::cout << text; 
 		getline(std::cin, field);
+		if (std::cin.eof())
+		{
+		    std::cout << "\nEOF received. Exiting program.\n";
+			exit(0);
+		}
 		if (phone)
 		{
 			size_t check = field.find_first_not_of("0123456789");
@@ -46,7 +52,6 @@ void Contact::getInfo(std::string &field, std::string text, bool phone)
 			break ;
 		std::cout << "This field is required. Please try again." << std::endl;
 	}
-	
 }
 void Contact::printChosenContact()
 {
