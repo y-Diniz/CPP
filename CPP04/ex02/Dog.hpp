@@ -1,9 +1,10 @@
 #ifndef DOG_HPP
 # define DOG_HPP
 
-# include "Animal.hpp"
+# include "AAnimal.hpp"
+# include "Brain.hpp"
 
-class Dog : public Animal {
+class Dog : public AAnimal {
 
 	public:
 		Dog();
@@ -11,7 +12,10 @@ class Dog : public Animal {
 		Dog( const Dog& a );
 		Dog& operator=( const Dog& a );
 		void makeSound() const;
+		Brain* getBrain() const;
 		
+	private:
+		Brain* brain;
 };
 
 #endif

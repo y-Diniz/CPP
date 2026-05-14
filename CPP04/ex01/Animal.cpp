@@ -1,4 +1,5 @@
 #include "Animal.hpp"
+#include "Brain.hpp"
 #include <iostream>
 
 Animal::Animal( ) {
@@ -26,4 +27,8 @@ void Animal::makeSound() const {
 
 const std::string& Animal::getType() const {
 	return (type);
+}
+
+Brain* Animal::getBrain() const {
+	return NULL;
 }

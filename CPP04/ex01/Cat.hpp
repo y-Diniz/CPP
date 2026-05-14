@@ -2,6 +2,7 @@
 # define CAT_HPP
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class Cat : public Animal {
 
@@ -11,6 +12,10 @@ class Cat : public Animal {
 		Cat( const Cat& a );
 		Cat& operator=( const Cat& a );
 		void makeSound() const;
+		Brain* getBrain() const;
+
+	private:
+		Brain* brain;
 
 };
 
